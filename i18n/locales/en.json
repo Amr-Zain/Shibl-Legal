@@ -92,12 +92,43 @@
     "heading": "About Us",
     "desc": "Learn about our vision, mission, and the values we believe in. Discover the story of our firm's establishment and the legal journey that has made us one of the leading law firms. We work with utmost dedication to achieve justice and serve our clients.",
     "moreAbout":"More About Us",
+    "vision": "Our vision is for Shibla Legal to become the leading digital platform for providing legal services in the region by facilitating access to legal advice and fostering trust between clients and lawyers.",
     "servicesCollection": "A wide range of legal services",
     "p1": "Fast response, personal attention.",
     "p2": "Strong defense, innovative strategies.",
     "p3": "Effective procedures, protect your rights.",
     "p4": "Precise consultations, latest laws."
 
+  },
+  "QUESTIONS": {
+    "1": {
+      "question": "What legal services does Shibla Legal offer?",
+      "answer": "We offer a diverse range of legal services including: legal consultations, litigation and defense before courts, contract drafting, company incorporation, judicial representation."
+    },
+    "2": {
+      "question": "How can I contact the Shibla Legal team?",
+      "answer": "You can contact the Shibla Legal team through several means, including: calling us at [Phone Number], sending an email to [Email Address], or visiting our office at [Address]."
+    },
+    "3": {
+      "question": "How can I book a legal consultation?",
+      "answer": "You can book a legal consultation by calling or emailing us to arrange a suitable time. You can also fill out a consultation request form on our website, and we will contact you as soon as possible."
+    },
+    "4": {
+      "question": "Do you only provide legal services to companies or also to individuals?",
+      "answer": "We provide comprehensive legal services to both companies and individuals alike. We have a specialized team to handle various legal issues facing both sectors."
+    },
+    "5": {
+      "question": "What are your working hours?",
+      "answer": "Our working hours are from [Start Time] to [End Time], from [Day] to [Day] in [Time Zone] time."
+    },
+    "6": {
+      "question": "What is the cost of the initial legal consultation?",
+      "answer": "The cost of the initial legal consultation varies depending on the nature and complexity of the case. Please contact us with the details of your case, and we will provide a cost estimate."
+    },
+    "7": {
+      "question": "What areas do you cover with your legal services?",
+      "answer": "We provide our legal services in [List of Areas or Cities]."
+    }
   },
   "WHY_US": {
     "heading": "Why Us",

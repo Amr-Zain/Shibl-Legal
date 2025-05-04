@@ -21,7 +21,7 @@ async function OurGoalsSection() {
           className="absolute left-[50%] top-0 max-w-[100%] translate-x-[-50%]"
         />
       </div>
-      <div className="rounded-3xl bg-backgroud-sec bg-[url('@/assets/images/goals_bg.svg')] p-8">
+      <div className="rounded-3xl bg-backgroud-sec bg-[url('@/assets/images/goals_bg.svg')] bg-cover bg-no-repeat p-8">
         <Image src={ICON} alt="icon" width={55} height={55} />
         <div
           className={`title-wrapper mb-12 !justify-start`}

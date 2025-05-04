@@ -19,7 +19,7 @@ function NavBar() {
   ];
   const [showModal, setShowModal] = useState(false);
   return (
-    <header className="backdrop-blur-xs fixed top-0 z-20 h-[4.5rem] w-[100%] bg-transparent/40 text-sub">
+    <header className="fixed top-0 z-20 h-[4.5rem] w-[100%] text-sub backdrop-blur-md">
       <div className="mx-auto h-full px-2 sm:px-6 lg:px-8">
         <div className="flex h-full items-center justify-between md:justify-between">
           <Link href="/" aria-label={T("homepage")}>
@@ -64,7 +64,7 @@ function NavBar() {
                         <li key={item.path} onClick={() => setShowModal(false)}>
                           <Link
                             href={item.path}
-                            className="block py-2 text-sm font-light text-text transition-colors hover:text-gray-400"
+                            className="block py-2 text-sm text-list-color transition-colors hover:text-gray-400"
                           >
                             {item.value}
                           </Link>

@@ -6,7 +6,11 @@ interface General {
     content: string;
     image: string;
 }
-
+interface Question{
+    id: string;
+    question: string;
+    answer: string;
+}
 
 
 interface Features {

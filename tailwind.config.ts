@@ -25,7 +25,7 @@ export default {
       'pink': '#ff49db',
       'orange': '#ff7849',
       'green': '#13ce66',
-      'description': '#697E95',
+      'description': '#F697E95',
       transparent: 'transparent',
       current: 'currentColor',
       red: colors.red,
