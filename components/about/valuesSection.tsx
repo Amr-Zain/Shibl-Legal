@@ -6,8 +6,8 @@ import IMAGE from "@/assets/images/footer.png";
 async function ValuesSection() {
   const T = await getTranslations("OUR_VALUES");
   return (
-    <section className="relative rounded-3xl bg-[url('@/assets/images/about/Rectangle.svg')] bg-cover bg-no-repeat w-[95%] mx-auto my-12 py-6">
-      <Image src={ICON} alt={""} width={50} height={50} className="mx-auto" />
+    <section className="relative rounded-3xl bg-[url('@/assets/images/about/Rectangle.svg')]  bg-right-top [background-size:1200px_auto] bg-no-repeat w-[95%] mx-auto my-12 py-6">
+      <Image src={ICON} alt={""} width={50} height={50} className="hidden sm:block mx-auto" />
       <span  className="">
         <Image
           src={IMAGE}
@@ -17,11 +17,11 @@ async function ValuesSection() {
           className="absolute right-0 top-0 rounded-full max-w-[9.5rem] max-h-[3rem] bg-cover bg-no-repeat border-6 border-backgroud"
         />
       </span>
-      <div className={`title-wrapper mb-12 !justify-start`}>
-        <h3 className="title !text-black">{T("heading")}</h3>
+      <div className={`title-wrapper mb-12 !justify-start !items-center sec-px mt-10 sm:mt-2`}>
+        <h3 className="title !text-black ">{T("heading")}</h3>
         <p className="desc relative !text-text-dark px-6 m-2">
           {T("subheading")}
-          <span className="absolute start-0 top-0 opacity-50">
+          <span className="absolute -start-1 top-0 opacity-50">
             <svg
               width="23"
               height="16"

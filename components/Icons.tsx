@@ -340,10 +340,11 @@ export const TimesIcon = ({
 
 export const PlusIcon = () => (
   <svg
-    width="18"
-    height="19"
+    width="15"
+    height="15"
     viewBox="0 0 18 19"
     fill="none"
+    className="max-w-[18px] max-h-[18px]"
   >
     <path
       d="M17 8.5H10V1.5C10 0.953333 9.54667 0.5 9 0.5C8.45333 0.5 8 0.953333 8 1.5V8.5H1C0.453333 8.5 0 8.95333 0 9.5C0 10.0467 0.453333 10.5 1 10.5H8V17.5C8 18.0467 8.45333 18.5 9 18.5C9.54667 18.5 10 18.0467 10 17.5V10.5H17C17.5467 10.5 18 10.0467 18 9.5C18 8.95333 17.5467 8.5 17 8.5Z"
@@ -354,10 +355,11 @@ export const PlusIcon = () => (
 
 export const MinusIcon = () => (
   <svg
-    width="18"
-    height="3"
+    width="15"
+    height="2"
     viewBox="0 0 18 3"
     fill="none"
+    className="m-w-[18px] m-h-[2px]"
   >
     <path
       d="M17 2.5H1C0.453333 2.5 0 2.04667 0 1.5C0 0.953333 0.453333 0.5 1 0.5H17C17.5467 0.5 18 0.953333 18 1.5C18 2.04667 17.5467 2.5 17 2.5Z"

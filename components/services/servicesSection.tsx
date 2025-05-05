@@ -5,6 +5,7 @@ import scalerIcon from "@/assets/icons/services/scaler.svg";
 import tableIcon from "@/assets/icons/services/table.svg";
 import { getTranslations } from "next-intl/server";
 import ServiceCard from "./serviesCard";
+import SectionHeader from "../SectionHeader";
 
 const services = [
   { id: "1", icon: tableIcon },
@@ -20,10 +21,10 @@ async function ServicesSection({ isPage }: { isPage?: boolean }) {
   return (
     <section className="px-4 py-10 md:px-8 lg:px-14">
       {!isPage && (
-        <div data-aos="fade-down" className={`title-wrapper md:!justify-start md:!items-start mb-12`}>
-          <h3 className="title !text-black mb-2 lg:!text-3xl">{T("SERVICES_HEADER.heading")}</h3>
-          <p className="desc">{T("SERVICES_HEADER.subheading")}</p>
-        </div>
+        <SectionHeader
+          heading={T("SERVICES_HEADER.heading")}
+          description={T("SERVICES_HEADER.subheading")}
+        />
       )}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {services.map((service) => (

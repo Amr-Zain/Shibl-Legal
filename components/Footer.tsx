@@ -13,7 +13,7 @@ async function Footer() {
     <ImageSection image={FOOTER} alt="footer image" className="">
       <footer className="px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-start py-6 gap-4 border-b border-sub">
-          <div>
+          <div className="flex-shrink-0">
             <Link href="/">
               <Image src={LOGO} alt={'logo'} width={75} height={75} />
             </Link>
@@ -23,7 +23,7 @@ async function Footer() {
             <p className="text-sub">{T("ABOUT_SECTIONS.desc")}</p>
           </div>
         </div>
-        <div className="flex justify-between items-center py-4">
+        <div className="flex sm:justify-between  gap-4 flex-col items-center py-4">
             <div className="text-text flex gap-4 text-sm" >
                 <span>{T('termsAndConditions')}</span>
                 <span>{T('privacyPolicy')}</span>

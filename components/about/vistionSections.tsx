@@ -9,7 +9,7 @@ async function OurVistionSection() {
       <div className="mx-auto aspect-square w-[35rem] max-w-[90%] rounded-full border border-white bg-[url(@/assets/images/about/bg.svg)]">
         <Image
           src={IMAGE}
-          alt={""}
+          alt={"our vision"}
           objectFit="cover"
           className="border-6 h-full w-full rounded-full bg-cover"
         />

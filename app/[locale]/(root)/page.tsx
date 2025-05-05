@@ -15,7 +15,7 @@ import { Link } from "@/i18n/routing";
 export default async function HomePage() {
   //const data: HomeType = await getHomeData();
   const T = await getTranslations();
-  const lang = T("lang")
+  const lang = T("lang");
 
   const questions = [1, 2, 3, 4].map((i) => ({
     id: String(i),
@@ -46,7 +46,7 @@ export default async function HomePage() {
               className={`base-btn-white animated flex items-center !backdrop-blur-md`}
             >
               <span className="whitespace-nowrap text-sm md:text-lg">
-                {T('NAV.showAll')}
+                {T("NAV.showAll")}
               </span>
               <span
                 className={`grid h-[1.25rem] w-[1.25rem] items-center justify-center rounded-full bg-primary/40 p-1 ${lang === "ltr" ? "rotate-180" : ""}`}

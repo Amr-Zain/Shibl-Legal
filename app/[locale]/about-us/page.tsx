@@ -6,7 +6,7 @@ import OurVistionSection from "@/components/about/vistionSections";
 export default async function AboutPage() {
   return (
     <>
-      <AboutSection isAbout />
+      <AboutSection isPage />
       <OurGoalsSection />
       <WhyUsSection />
       <ValuesSection />

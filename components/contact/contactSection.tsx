@@ -6,6 +6,7 @@ import LOCATION from "@/assets/icons/contact/location.svg";
 import CALL from "@/assets/icons/contact/call.svg";
 import CLOCK from "@/assets/icons/contact/clock.svg";
 import EMAIL from "@/assets/icons/contact/sms.svg";
+import SectionHeader from "../SectionHeader";
 
 async function ContactSection({ isPage }: { isPage?: boolean }) {
   const T = await getTranslations();
@@ -18,15 +19,10 @@ async function ContactSection({ isPage }: { isPage?: boolean }) {
   return (
     <section className={`sec-px ${isPage ? "mt-12" : ""}`}>
       {!isPage && (
-        <div
-          data-aos="fade-down"
-          className={`title-wrapper title-wrapper mb-12 md:!items-start md:!justify-start`}
-        >
-          <h3 className="title mb-2 !text-black lg:!text-3xl">
-            {T("CONTACT_HEADER.heading")}
-          </h3>
-          <p className="desc">{T("CONTACT_HEADER.subheading")}</p>
-        </div>
+        <SectionHeader
+          heading={T("CONTACT_HEADER.heading")}
+          description={T("CONTACT_HEADER.subheading")}
+        />
       )}
       <div className="grid grid-cols-1 items-center lg:grid-cols-[minmax(650px,1fr)_1fr]">
         <div className="relative">
@@ -56,7 +52,7 @@ async function ContactSection({ isPage }: { isPage?: boolean }) {
               </li>
             ))}
           </ul>
-          <span className="absolute top-0 end-0">
+          <span className="absolute end-0 top-0">
             <svg
               width="32"
               height="33"

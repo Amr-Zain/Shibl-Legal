@@ -16,20 +16,21 @@ function AccordionSection({
   const toggleQuestion = (id: string) => {
     setActiveQuestion((prev) => (prev === id ? "" : id));
   };
+
   return (
-    <section data-aos="fade-down" className="my-8">
+    <section data-aos="fade-down" className="my-8 sec-px">
       {children}
       {questions.map((question, i) => (
-        <div key={question.id} className="px-2 md:px-16">
+        <div key={question.id} className={`px-2`}>
           <button
             onClick={() => toggleQuestion(question.id)}
-            className={`flex w-full items-center justify-between py-4 transition-colors duration-200 ${!isPage&&"border-b border-gray-500 last:border-0"}`}
+            className={`flex w-full items-center justify-between py-4 transition-colors duration-200 ${!isPage && i !== questions.length - 1 ? "border-b border-secondary/80" : ""}`}
           >
             <div
-              className={`flex items-start justify-start text-sm font-medium md:text-lg ${isPage ? "text-list-color" : "text-text"}`}
+              className={`flex items-start justify-start text-[0.75rem] sm:text-sm font-medium md:text-lg  ${isPage ? "text-list-color" : "text-text"}`}
             >
               <span className="mx-2">{i + 1}.</span>
-              <h3>{question.question}</h3>
+              <h3 className="">{question.question}</h3>
             </div>
             <span
               className={`shrink-0 ${isPage ? "text-primary" : "text-text"}`}
