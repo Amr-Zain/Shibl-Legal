@@ -14,7 +14,7 @@ async function Footer() {
       <footer className="px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-start py-6 gap-4 border-b border-sub">
           <div>
-            <Link href="/" aria-label={T("homepage")}>
+            <Link href="/">
               <Image src={LOGO} alt={'logo'} width={75} height={75} />
             </Link>
           </div>

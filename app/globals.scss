@@ -163,8 +163,11 @@ html[dir="rtl"] {
   }
 
 }
+.sec-px {
+  @apply px-2 sm:px-6 lg:px-8
+}
 .base-btn-white {
-  @apply flex items-center justify-center gap-3 rounded-full border border-primary bg-white px-8 py-3 font-medium text-primary duration-300 hover:cursor-pointer hover:border-white hover:bg-primary hover:text-white;
+  @apply flex items-center justify-center gap-3 rounded-full bg-white/20 px-8 py-3 font-medium text-primary duration-300 hover:cursor-pointer hover:bg-primary hover:text-white;
 
   &:disabled {
     @apply bg-[#F0F0F0] text-[#CACBD2];

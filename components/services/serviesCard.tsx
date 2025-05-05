@@ -11,7 +11,7 @@ const ServiceCard = ({
     subheading: string;
     colSpan?: string;
   }) => (
-    <div className={`rounded-3xl bg-backgroud-sec p-8 ${colSpan || ""}`}>
+    <div data-aos="fade-down" className={`rounded-3xl bg-backgroud-sec p-8 ${colSpan || ""}`}>
       <div className="mb-6">
         <Image src={icon} width={64} height={64} alt="Service icon" />
       </div>

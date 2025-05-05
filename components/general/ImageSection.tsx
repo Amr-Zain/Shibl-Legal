@@ -7,7 +7,7 @@ type Props = {
   className: string;
   overlayClass?: string;
   children: React.ReactNode;
-  Element?: () => Promise<JSX.Element>;
+  Element?: () => Promise<JSX.Element> ;
 };
 
 function ImageSection({ image, alt, className, children, overlayClass, Element }: Props) {

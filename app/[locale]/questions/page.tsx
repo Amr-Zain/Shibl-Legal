@@ -10,7 +10,7 @@ async function QurestionsPage() {
   }));
   return (
     <>
-      <AccordionSection questions={questions} />
+      <AccordionSection questions={questions} isPage />
     </>
   );
 }

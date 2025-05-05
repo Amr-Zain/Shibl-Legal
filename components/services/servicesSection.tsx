@@ -20,8 +20,8 @@ async function ServicesSection({ isPage }: { isPage?: boolean }) {
   return (
     <section className="px-4 py-10 md:px-8 lg:px-14">
       {!isPage && (
-        <div data-aos="fade-down" className={`title-wrapper mb-12`}>
-          <h3 className="title !text-black">{T("SERVICES_HEADER.heading")}</h3>
+        <div data-aos="fade-down" className={`title-wrapper md:!justify-start md:!items-start mb-12`}>
+          <h3 className="title !text-black mb-2 lg:!text-3xl">{T("SERVICES_HEADER.heading")}</h3>
           <p className="desc">{T("SERVICES_HEADER.subheading")}</p>
         </div>
       )}

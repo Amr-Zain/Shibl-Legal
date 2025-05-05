@@ -5,9 +5,11 @@ import { MinusIcon, PlusIcon } from "../Icons";
 function AccordionSection({
   children,
   questions,
+  isPage,
 }: {
   children?: React.ReactNode;
   questions: Question[];
+  isPage?: boolean;
 }) {
   const [activeQuestion, setActiveQuestion] = useState("");
 
@@ -15,18 +17,23 @@ function AccordionSection({
     setActiveQuestion((prev) => (prev === id ? "" : id));
   };
   return (
-    <section className="my-8">
+    <section data-aos="fade-down" className="my-8">
       {children}
-      {questions.map((question,i) => (
-        <div key={question.id} className="px-8 md:px-16">
+      {questions.map((question, i) => (
+        <div key={question.id} className="px-2 md:px-16">
           <button
             onClick={() => toggleQuestion(question.id)}
-            className="flex w-full items-center justify-between py-4 transition-colors duration-200"
+            className={`flex w-full items-center justify-between py-4 transition-colors duration-200 ${!isPage&&"border-b border-gray-500 last:border-0"}`}
           >
-            <h3 className="text-lg font-medium text-list-color">
-              <span className="mx-2">{i+1}.</span>{question.question}
-            </h3>
-            <span className="shrink-0 text-primary">
+            <div
+              className={`flex items-start justify-start text-sm font-medium md:text-lg ${isPage ? "text-list-color" : "text-text"}`}
+            >
+              <span className="mx-2">{i + 1}.</span>
+              <h3>{question.question}</h3>
+            </div>
+            <span
+              className={`shrink-0 ${isPage ? "text-primary" : "text-text"}`}
+            >
               {activeQuestion === question.id ? <MinusIcon /> : <PlusIcon />}
             </span>
           </button>
