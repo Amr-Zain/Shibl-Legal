@@ -15,7 +15,7 @@ async function OurVistionSection() {
         />
       </div>
       <div className="absolute bottom-[10%] left-[10%] hidden max-h-fit w-[450px] max-w-[90%] rounded-3xl bg-white/70 backdrop-blur-md sm:block lg:bottom-[20%]">
-        <p className="mx-auto my-4 w-[70%] text-text-dark">{T("vision")}</p>
+        <p className="mx-auto my-4 w-[70%] text-sub">{T("vision")}</p>
       </div>
     </section>
   );

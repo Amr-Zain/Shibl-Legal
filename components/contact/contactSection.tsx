@@ -24,7 +24,7 @@ async function ContactSection({ isPage }: { isPage?: boolean }) {
           description={T("CONTACT_HEADER.subheading")}
         />
       )}
-      <div className="grid grid-cols-1 items-center lg:grid-cols-[minmax(650px,1fr)_1fr]">
+      <div data-aos={'fade-down'} className="grid grid-cols-1 items-center lg:grid-cols-[minmax(650px,1fr)_1fr]">
         <div className="relative">
           <div className="mb-4 text-center">
             <Image

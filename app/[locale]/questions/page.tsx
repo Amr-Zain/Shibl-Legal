@@ -1,5 +1,8 @@
+import Header from "@/components/Header";
 import AccordionSection from "@/components/questions/Accordion";
 import { getTranslations } from "next-intl/server";
+import QUESTIONS from "@/assets/images/header/questions.png";
+
 async function QurestionsPage() {
   const T = await getTranslations("QUESTIONS");
 
@@ -10,6 +13,7 @@ async function QurestionsPage() {
   }));
   return (
     <>
+      <Header page="QUESITONS" image={QUESTIONS} />
       <AccordionSection questions={questions} isPage />
     </>
   );

@@ -3,35 +3,44 @@ import Image from "next/image";
 import LOGO from "@/assets/images/Logo2.png";
 import FOOTER from "@/assets/images/footer.png";
 import { getTranslations } from "next-intl/server";
-import ImageSection from "./general/ImageSection";
 import SocialLinks from "./general/SocialLinks";
 
 async function Footer() {
   const T = await getTranslations();
 
   return (
-    <ImageSection image={FOOTER} alt="footer image" className="">
-      <footer className="px-2 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-start py-6 gap-4 border-b border-sub">
-          <div className="flex-shrink-0">
-            <Link href="/">
-              <Image src={LOGO} alt={'logo'} width={75} height={75} />
-            </Link>
-          </div>
-          <div data-aos="fade-down">
-            <h3 className="text-[1.5rem] text-text">{T("title")}</h3>
-            <p className="text-sub">{T("ABOUT_SECTIONS.desc")}</p>
-          </div>
-        </div>
-        <div className="flex sm:justify-between  gap-4 flex-col items-center py-4">
-            <div className="text-text flex gap-4 text-sm" >
-                <span>{T('termsAndConditions')}</span>
-                <span>{T('privacyPolicy')}</span>
+      <footer className={`relative`}>
+        <div className={`overlay`}></div>
+        <Image
+          src={FOOTER}
+          alt={"footer image"}
+          fill={true}
+          objectFit="cover"
+          className={"z-[2]"}
+        />
+        <div data-aos="fade-down" className="relative z-20">
+          <div className="px-2 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-start gap-4 border-b border-sub py-6">
+              <div className="flex-shrink-0">
+                <Link href="/">
+                  <Image src={LOGO} alt={"logo"} width={75} height={75} />
+                </Link>
+              </div>
+              <div data-aos="fade-down">
+                <h3 className="text-[1.5rem] text-text">{T("title")}</h3>
+                <p className="text-sub">{T("ABOUT_SECTIONS.desc")}</p>
+              </div>
             </div>
-            <SocialLinks />
+            <div className="flex flex-col items-center gap-4 py-4 sm:flex-row sm:justify-between">
+              <div className="flex gap-4 text-sm text-text">
+                <span>{T("termsAndConditions")}</span>
+                <span>{T("privacyPolicy")}</span>
+              </div>
+              <SocialLinks />
+            </div>
+          </div>
         </div>
       </footer>
-    </ImageSection>
   );
 }
 

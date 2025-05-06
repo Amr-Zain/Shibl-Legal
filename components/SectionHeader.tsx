@@ -1,7 +1,7 @@
 
 interface SectionHeaderProps {
     heading: string;
-    description: string;
+    description?: string;
   }
   
   const SectionHeader = ({ heading, description }: SectionHeaderProps) => (
@@ -12,7 +12,7 @@ interface SectionHeaderProps {
       <h3 className="title mb-2 !text-black lg:!text-3xl">
         {heading}
       </h3>
-      <p className="desc">{description}</p>
+      {description&&<p className="desc">{description}</p>}
     </div>
   );
   export default SectionHeader

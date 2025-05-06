@@ -17,7 +17,7 @@ const StatItem = ({
       <div dir="rtl" className="text-center text-[3rem] md:text-[4rem] font-bold text-primary">
         <span className="relative">
           +
-          <span className="absolute -right-7 bottom-[-0.45rem] h-14 w-14">
+          <span className="absolute -right-7 bottom-[-0.45rem] size-14">
             <Image
               src={icon}
               alt=""

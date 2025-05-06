@@ -6,20 +6,26 @@ import IMAGE from "@/assets/images/footer.png";
 async function ValuesSection() {
   const T = await getTranslations("OUR_VALUES");
   return (
-    <section className="relative rounded-3xl bg-[url('@/assets/images/about/Rectangle.svg')]  bg-right-top [background-size:1200px_auto] bg-no-repeat w-[95%] mx-auto my-12 py-6">
-      <Image src={ICON} alt={""} width={50} height={50} className="hidden sm:block mx-auto" />
-      <span  className="">
-        <Image
-          src={IMAGE}
-          alt={""}
-          width={152}
-          height={48}
-          className="absolute right-0 top-0 rounded-full max-w-[9.5rem] max-h-[3rem] bg-cover bg-no-repeat border-6 border-backgroud"
-        />
-      </span>
-      <div className={`title-wrapper mb-12 !justify-start !items-center sec-px mt-10 sm:mt-2`}>
-        <h3 className="title !text-black ">{T("heading")}</h3>
-        <p className="desc relative !text-text-dark px-6 m-2">
+    <section className="relative mx-auto my-12  w-[95%] rounded-3xl bg-[url('@/assets/images/about/Rectangle.svg')] bg-right-top bg-no-repeat py-6 [background-size:1200px_auto]">
+      <Image
+        src={ICON}
+        alt={""}
+        width={50}
+        height={50}
+        className="mx-auto hidden sm:block"
+      />
+      <Image
+        src={IMAGE}
+        alt={"backgroud"}
+        width={152}
+        height={48}
+        className="absolute right-0 top-0 max-h-[3rem] max-w-[9.5rem] rounded-full bg-cover bg-no-repeat"
+      />
+      <div
+        className={`title-wrapper sec-px mb-12 mt-10 !items-center !justify-start sm:mt-2`}
+      >
+        <h3 className="title !text-black !text-xl md:!text-3xl">{T("heading")}</h3>
+        <p className="desc relative m-2 px-6 !text-text-dark">
           {T("subheading")}
           <span className="absolute -start-1 top-0 opacity-50">
             <svg
@@ -39,7 +45,7 @@ async function ValuesSection() {
               />
             </svg>
           </span>
-          <span className="absolute end-0  -botton-4 opacity-50">
+          <span className="-botton-4 absolute end-0 opacity-50">
             <svg
               width="23"
               height="16"

@@ -1,38 +1,54 @@
 "use server";
 import { getTranslations } from "next-intl/server";
-import Button from "../general/primaryButton";
 import Title from "@/components/general/Title";
-import ImageSection from "@/components/general/ImageSection";
-import { Aword } from "@/components/Icons";
+import { ArrowLeft, Aword } from "@/components/Icons";
 import HOME from "@/assets/images/header/home.jpg";
 import HeaderBar from "./HeaderBar";
-
+import Image from "next/image";
+import { Link } from "@/i18n/routing";
 
 export default async function HomeHeader() {
-  const T = await getTranslations("HOME_HEADER");
+  const T = await getTranslations();
 
   return (
-    <ImageSection
-      image={HOME}
-      alt="Home Header"
-      className="sec-px h-[40rem] pt-[10rem]"
-      Element={HeaderBar }
-    >
-      <div className="title-wrapper !flex-row !items-center !justify-start gap-2">
-        <Aword aria-label={T("bestPlaceLabel")} />
-        <p className="desc">{T("bestPlaceLabel")}</p>
-      </div>
-
-      <Title
-        title={T("heading")}
-        desc={T("subheading")}
-        className="!justify-start"
+    <div className={`sec-px relative h-[40rem] pt-[10rem]`}>
+      <div className={`overlay`}></div>
+      <Image
+        src={HOME}
+        alt={"backgroud"}
+        fill={true}
+        objectFit="cover"
+        className={"z-[2] rounded-[30px]"}
       />
+      <div data-aos="fade-down" className="relative z-20">
+        <div className="title-wrapper !flex-row !items-center !justify-start gap-2">
+          <Aword aria-label={T("HOME_HEADER.bestPlaceLabel")} />
+          <p className="desc">{T("HOME_HEADER.bestPlaceLabel")}</p>
+        </div>
 
-      <div className="flex items-center gap-2">
-        <Button text={T("contactButton")} url="/contact-us" />
-        <p className="text-sub">{T("advicePrompt")}</p>
+        <Title
+          title={T("HOME_HEADER.heading")}
+          desc={T("HOME_HEADER.subheading")}
+          className="!justify-start"
+        />
+
+        <div className="">
+          <Link
+            href="/contact-us"
+            className={`base-btn animated flex items-centerflex items-center gap-2 w-fit mb-2`}
+          >
+            <span className="whitespace-nowrap text-sm md:text-lg">{T("HOME_HEADER.contactButton")}</span>
+            <span
+              className={`grid size-[1.25rem] items-center justify-center rounded-full bg-white/40 p-1 ${T("lang") === "ltr" ? "rotate-180" : ""}`}
+            >
+              <ArrowLeft />
+            </span>
+          </Link>
+
+          <p className="text-sub">{T("HOME_HEADER.advicePrompt")}</p>
+        </div>
       </div>
-    </ImageSection>
+      <HeaderBar />
+    </div>
   );
 }

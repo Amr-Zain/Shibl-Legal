@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 
-export type SocialKey = "linkedin" | "facebook" | "instagram" | "youtube" | "x";
+export type SocialKey = "linkedin" | "facebook" | "instagram" | "youtube" | "x"| "whatsapp";
 
 export type SettingsType = {
     email?: string

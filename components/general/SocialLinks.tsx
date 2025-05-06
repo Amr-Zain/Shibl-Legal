@@ -7,16 +7,12 @@ import { appStore, SocialKey } from "@/stores/app";
 import {
   Facebook,
   Instagram,
-  Linkedin,
   Twitter,
-  Youtube,
+  Whatsapp,
 } from "@/components/Icons";
 const SocialLinks = ({ className = "" }: { className?: string }) => {
   const socialLinks: { icon: React.ElementType; name: SocialKey }[] = [
-    {
-      icon: Linkedin,
-      name: "linkedin",
-    },
+   
     {
       icon: Facebook,
       name: "facebook",
@@ -26,8 +22,8 @@ const SocialLinks = ({ className = "" }: { className?: string }) => {
       name: "instagram",
     },
     {
-      icon: Youtube,
-      name: "youtube",
+      icon: Whatsapp,
+      name: "whatsapp",
     },
     {
       icon: Twitter,

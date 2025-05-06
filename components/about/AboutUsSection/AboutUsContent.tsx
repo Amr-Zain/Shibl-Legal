@@ -1,46 +1,61 @@
 import { getTranslations } from "next-intl/server";
 import SectionHeader from "../../SectionHeader";
-import Image, { StaticImageData } from "next/image";
-import { Aword } from "../../Icons";
+import { ArrowLeft, Aword } from "../../Icons";
 import OVERLAPPED1 from "@/assets/images/about/overlapped1.png";
 import OVERLAPPED2 from "@/assets/images/about/overlapped2.png";
 import OVERLAPPED3 from "@/assets/images/about/overlapped3.png";
-import Button from "../../general/primaryButton";
+import OverlappingImages from "./OverlappingImages";
+import { Link } from "@/i18n/routing";
 
 interface ContentSectionProps {
   isPage?: boolean;
 }
 const AboutUsContent = async ({ isPage }: ContentSectionProps) => {
-  const T = await getTranslations("ABOUT_SECTIONS");
+  const T = await getTranslations();
 
   return (
     <div>
-      <SectionHeader heading={T("heading")} description={T("desc")} />
-
+      <SectionHeader
+        heading={T("ABOUT_SECTIONS.heading")}
+        description={T("ABOUT_SECTIONS.desc")}
+      />
       <div className="space-y-5 bg-right-bottom bg-no-repeat">
         <div className="mb-12 grid grid-cols-1 items-start md:gap-x-8 lg:grid-cols-2">
           {[1, 2, 3, 4].map((item) => (
-            <FeatureListItem key={item} text={T(`p${item}`)} />
+            <FeatureListItem key={item} text={T(`ABOUT_SECTIONS.p${item}`)} />
           ))}
         </div>
 
-        <TeamMembersPreview
-          images={[OVERLAPPED1, OVERLAPPED2, OVERLAPPED3]}
-          text={T("servicesCollection")}
-        />
+        <div className="mb-12 flex items-center gap-2">
+          <OverlappingImages
+            images={[OVERLAPPED1, OVERLAPPED2, OVERLAPPED3]}
+            size={40}
+            overlap={20}
+          />
+          <p className="text-sub">{T("ABOUT_SECTIONS.servicesCollection")}</p>
+        </div>
 
         {!isPage && (
-          <Button
-            text={T("moreAbout")}
-            url="/about-us"
-            className="max-w-[12rem]"
-          />
+          <Link
+            href={"/about-us"}
+            className={`base-btn animated flex w-fit max-w-[12rem] items-center`}
+          >
+            <span className="whitespace-nowrap text-sm md:text-lg">
+              {T("ABOUT_SECTIONS.moreAbout")}
+            </span>
+            <span
+              className={`grid h-[1.25rem] w-[1.25rem] items-center justify-center rounded-full bg-white/40 p-1 ${T("lang") === "ltr" ? "rotate-180" : ""}`}
+            >
+              <ArrowLeft />
+            </span>
+          </Link>
         )}
       </div>
     </div>
   );
 };
 export default AboutUsContent;
+
 interface FeatureListItemProps {
   text: string;
 }
@@ -50,59 +65,6 @@ const FeatureListItem = ({ text }: FeatureListItemProps) => (
     <span aria-hidden="true">
       <Aword />
     </span>
-    <p className="desc  !text-list-color">{text}</p>
+    <p className="desc !text-list-color">{text}</p>
   </div>
 );
-interface TeamMembersPreviewProps {
-  images: StaticImageData[];
-  text: string;
-}
-const TeamMembersPreview = ({ images, text }: TeamMembersPreviewProps) => (
-  <div className="mb-12 flex items-center gap-2">
-    <OverlappingImages images={images} size={40} overlap={20} />
-    <p className="text-sub">{text}</p>
-  </div>
-);
-
-interface OverlappingImagesProps {
-  images: StaticImageData[];
-  size?: number;
-  overlap?: number;
-}
-const OverlappingImages: React.FC<OverlappingImagesProps> = ({
-  images,
-  size = 50,
-  overlap = size * 0.2,
-}) => {
-  const containerWidth = size + (images.length - 1) * (size - overlap);
-
-  return (
-    <div
-      className="relative"
-      style={{
-        width: containerWidth,
-        height: size,
-      }}
-    >
-      {images.map((imageSrc, index) => (
-        <span
-          key={index}
-          className="absolute overflow-hidden rounded-full border-[3px] border-backgroud"
-          style={{
-            left: index * (size - overlap),
-            width: size,
-            height: size,
-          }}
-        >
-          <Image
-            src={imageSrc}
-            width={size}
-            height={size}
-            className="h-full w-full object-cover"
-            alt={`Image ${index + 1}`}
-          />
-        </span>
-      ))}
-    </div>
-  );
-};

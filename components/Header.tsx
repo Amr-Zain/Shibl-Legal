@@ -1,24 +1,28 @@
-
-import ImageSection from "@/components/general/ImageSection";
 import Title from "@/components/general/Title";
 import { getTranslations } from "next-intl/server";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-export default async function Header({ page, image  }: {page: string, image: StaticImageData}) {
-
+export default async function Header({
+  page,
+  image,
+}: {
+  page: string;
+  image: StaticImageData;
+}) {
   const T = await getTranslations(`${page.toUpperCase()}_HEADER`);
   return (
-    <div className="space-y-12">
-      <ImageSection
-        image={image}
-        alt="About"
-        className="px-2 pt-[10rem] pb-[4rem] sm:px-6 lg:px-8"
-      >
-        <Title
-          title={T("heading")}
-          desc={T("subheading")}
+      <div className={`relative px-2 pb-[4rem] pt-[10rem] sm:px-6 lg:px-8`}>
+        <span className={`overlay`}></span>
+        <Image
+          src={image}
+          alt={"header image"}
+          fill={true}
+          objectFit="cover"
+          className={"z-[2]"}
         />
-      </ImageSection>
-    </div>
+        <div data-aos="fade-down" className="relative z-20">
+          <Title title={T("heading")} desc={T("subheading")} />
+        </div>
+      </div>
   );
 }
