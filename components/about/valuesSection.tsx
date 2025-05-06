@@ -7,6 +7,7 @@ async function ValuesSection() {
   const T = await getTranslations("OUR_VALUES");
   return (
     <section className="relative mx-auto my-12  w-[95%] rounded-3xl bg-[url('@/assets/images/about/Rectangle.svg')] bg-right-top bg-no-repeat py-6 [background-size:1200px_auto]">
+
       <Image
         src={ICON}
         alt={""}
@@ -22,6 +23,7 @@ async function ValuesSection() {
         className="absolute right-0 top-0 max-h-[3rem] max-w-[9.5rem] rounded-full bg-cover bg-no-repeat"
       />
       <div
+        data-aos={'fade-down'}
         className={`title-wrapper sec-px mb-12 mt-10 !items-center !justify-start sm:mt-2`}
       >
         <h3 className="title !text-black !text-xl md:!text-3xl">{T("heading")}</h3>
@@ -65,6 +67,7 @@ async function ValuesSection() {
           </span>
         </p>
       </div>
+      <div className="absolute top-0 left-0 w-[50%] rounded-3xl h-full bg-[url('@/assets/images/about/Rectangle.svg')] bg-left-top bg-no-repeat py-6 z-[-1] "></div>
     </section>
   );
 }

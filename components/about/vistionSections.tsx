@@ -5,7 +5,7 @@ import { getTranslations } from "next-intl/server";
 async function OurVistionSection() {
   const T = await getTranslations("ABOUT_SECTIONS");
   return (
-    <section className="relative mb-8 bg-[url(@/assets/images/about/vision.svg)] bg-top bg-no-repeat pt-[7rem]">
+    <section data-aos={'fade-down'} className="relative mb-8 bg-[url(@/assets/images/about/vision.svg)] bg-top bg-no-repeat pt-[7rem]">
       <div className="mx-auto aspect-square w-[35rem] max-w-[90%] rounded-full border border-white bg-[url(@/assets/images/about/bg.svg)]">
         <Image
           src={IMAGE}

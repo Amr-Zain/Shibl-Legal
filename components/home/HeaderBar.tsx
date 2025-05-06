@@ -19,8 +19,8 @@ const HeaderBar = async () => {
   ];
 
   return (
-    <section className="scrollbar-hide gird absolute -bottom-14 z-20 mx-auto h-20 w-[95%] grid-cols-[repeat(3,minmax(250px,l))] overflow-x-auto rounded-3xl bg-white px-4 py-4 shadow-lg">
-      <div className="flex items-center justify-center gap-4">
+    <div className="scrollbar-hide  gird absolute -bottom-10 z-20 mx-auto h-20 w-[95%] flex  overflow-x-auto rounded-3xl bg-white px-4 py-4 shadow-lg">
+      <div className="flex items-center justify-center gap-4 w-fit mx-[4rem]">
         {items.map(({ icon, text }, index) => (
           <div
             key={index}
@@ -44,7 +44,7 @@ const HeaderBar = async () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

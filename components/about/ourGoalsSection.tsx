@@ -28,10 +28,9 @@ async function OurGoalsSection() {
       <div className="rounded-3xl bg-backgroud-sec bg-[url('@/assets/images/goals_bg.svg')] bg-cover bg-no-repeat p-8">
         <Image src={ICON} alt="icon" width={55} height={55} />
         <SectionHeader heading={T('heading')} description={T('subheading')} />
-        <ul className="grid grid-cols-1 gap-x-2 pl-4 lg:grid-cols-2 lg:gap-x-8">
+        <ul className="grid grid-cols-1 gap-x-2 pl-4 lg:grid-cols-2 lg:gap-x-8 [list-style:initial] ">
           {[1, 2, 3, 4, 5].map((i) => (
             <li key={i} className="relative mx-2 pb-4 text-sub">
-              <span className="absolute -start-2 top-[0.9rem] inline-block size=[3px] rounded-full bg-sub"></span>
               {T(`p${i}`)}
             </li>
           ))}

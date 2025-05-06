@@ -43,7 +43,7 @@ const HomeQuestions = async () => {
               <span
                 className={`grid size-[1.25rem] items-center justify-center rounded-full bg-primary/40 p-1 ${lang === "ltr" ? "rotate-180" : ""}`}
               >
-                <ArrowLeft />
+                <ArrowLeft className="text-primary/90" />
               </span>
             </Link>
           </div>

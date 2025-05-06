@@ -1,7 +1,7 @@
 
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 //import { headers } from 'next/headers';
 
 import type { Metadata } from "next";
@@ -21,12 +21,13 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const { locale } = await params;
+  const T = await getTranslations();
   const isArabic = locale === "ar";
   console.log(isArabic)
   //const settings = await getSettingsData();
  
   return {
-    title: "title",
+    title: T('title'),
     description: "Desc",
     icons: {
       icon: "/logo.png",

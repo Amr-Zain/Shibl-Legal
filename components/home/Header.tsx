@@ -1,4 +1,3 @@
-"use server";
 import { getTranslations } from "next-intl/server";
 import Title from "@/components/general/Title";
 import { ArrowLeft, Aword } from "@/components/Icons";
@@ -18,7 +17,7 @@ export default async function HomeHeader() {
         alt={"backgroud"}
         fill={true}
         objectFit="cover"
-        className={"z-[2] rounded-[30px]"}
+        className={"z-[2]"}
       />
       <div data-aos="fade-down" className="relative z-20">
         <div className="title-wrapper !flex-row !items-center !justify-start gap-2">
