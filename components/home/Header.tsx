@@ -1,19 +1,28 @@
 import { getTranslations } from "next-intl/server";
 import Title from "@/components/general/Title";
 import { ArrowLeft, Aword } from "@/components/Icons";
-import HOME from "@/assets/images/header/home.jpg";
 import HeaderBar from "./HeaderBar";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 
-export default async function HomeHeader() {
+export default async function HomeHeader({
+  image,
+  title,
+  desc,
+  features
+}: {
+  desc: string;
+  title: string;
+  image: string;
+  features: Feature[]
+}) {
   const T = await getTranslations();
 
   return (
     <div className={`sec-px relative h-[40rem] pt-[10rem]`}>
       <div className={`overlay`}></div>
       <Image
-        src={HOME}
+        src={image}
         alt={"backgroud"}
         fill={true}
         objectFit="cover"
@@ -26,8 +35,8 @@ export default async function HomeHeader() {
         </div>
 
         <Title
-          title={T("HOME_HEADER.heading")}
-          desc={T("HOME_HEADER.subheading")}
+          title={title}
+          desc={desc}
           className="!justify-start"
         />
 
@@ -47,7 +56,7 @@ export default async function HomeHeader() {
           <p className="text-sub">{T("HOME_HEADER.advicePrompt")}</p>
         </div>
       </div>
-      <HeaderBar />
+      <HeaderBar features={features} />
     </div>
   );
 }

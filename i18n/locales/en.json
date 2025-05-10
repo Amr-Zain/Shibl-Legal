@@ -8,7 +8,6 @@
   "partner": "Your Trusted Legal Partner",
   "NAV": {
     "lang": "ع",
-
     "home": "Home",
     "homepage": "Go to homepage",
     "news": "News",
@@ -27,123 +26,21 @@
     "quickAccess": "Quick Access"
   },
   "HOME_HEADER": {
-    "heading": "Customized Legal Solutions for Your Individual and Business Needs",
-    "subheading": "We prioritize our clients' interests and work diligently to achieve the best possible outcomes in every case.",
     "bestPlaceLabel": "One of the Best Law Firms",
     "contactButton": "Contact Us",
-    "advicePrompt": "Don't Hesitate to Seek Legal Advice",
-    "team": "A team of certified and highly competent lawyers",
-    "experience": "Extensive experience across all legal specializations",
-    "success": "Recognized legal successes acknowledged by our valued clients"
-  },
-  "OUR_GOALS": {
-   "heading": "Our Goals",
-  "subheading": "Shibl Legal aims to provide an integrated legal platform that allows users to access legal services easily and professionally. The company's main objectives include the following:",
-    "p1": "Empowering users with quick search and access to services",
-    "p2": "Providing specialized legal services",
-    "p3": "Achieving a seamless and efficient user experience",
-    "p4": "Enhancing communication and trust with clients",
-    "p5": "Providing an integrated management system for administration"
-  },
-  "ABOUT_HEADER": {
-    "heading": "About Us",
-    "subheading": "We prioritize our clients' interests and work diligently to achieve the best possible outcomes in every case."
-  },
-  "CONTACT_HEADER": {
-    "heading": "Contact Us",
-    "subheading": "We're here to help you! Reach out to us by phone, email, or visit us at our office. You can also use the interactive map to find our exact location.",
-     "schedule": "Daily, 8:00 AM to 4:00 PM",
-  "location": "Riyadh, Saudi Arabia"
-  },
-  "OUR_VALUES": {
-    "heading": "Core Values",
-    "subheading": "Professionalism and transparency in client dealings, innovation in providing digital legal solutions, delivering accurate and reliable legal services, building long-term relationships with clients through continuous support."
-  },
-  "QUESITONS_HEADER": {
-    "heading": "Frequent Questions",
-    "subheading": "All the questions that might come to your mind to know more about Shibl Law Firm."
-  },
-  "SERVICES_HEADER": {
-    "heading": "Our Services",
-    "subheading": "At \"Shibl Legal,\" we offer a comprehensive range of legal services specifically designed to meet the needs of our clients. Whether you are an individual seeking legal advice or a company requiring integrated legal support, we are here to be your trusted legal partner."
-  },
-  "SERVICES_CARDS": {
-    "1": {
-      "heading": "Litigation and Advocacy",
-      "subheading": "Our professional team represents clients before courts and various judicial bodies to ensure their rights and achieve justice."
-    },
-    "2": {
-      "heading": "Contract Drafting",
-      "subheading": "We assist in preparing and drafting contracts of all types to ensure the protection of your legal rights and the achievement of your interests."
-    },
-    "3": {
-      "heading": "Judicial Representation",
-      "subheading": "We represent our clients in all legal procedures and complex cases to ensure the smooth and effective progress of the legal process."
-    },
-    "4": {
-      "heading": "Legal Consultations",
-      "subheading": "We provide accurate and reliable legal consultations to help you make the right decisions in various matters, both personal and commercial."
-    },
-    "5": {
-      "heading": "Company Formation",
-      "subheading": "We provide company formation services and prepare all required legal documents to start businesses in a correct and legal manner."
-    }
+    "advicePrompt": "Don't Hesitate to Seek Legal Advice"
   },
   "ABOUT_SECTIONS": {
-    "heading": "About Us",
-    "desc": "Learn about our vision, mission, and the values we believe in. Discover the story of our firm's establishment and the legal journey that has made us one of the leading law firms. We work with utmost dedication to achieve justice and serve our clients.",
-    "moreAbout":"More About Us",
+    "moreAbout": "More About Us",
     "vision": "Our vision is for Shibla Legal to become the leading digital platform for providing legal services in the region by facilitating access to legal advice and fostering trust between clients and lawyers.",
-    "servicesCollection": "A wide range of legal services",
-    "p1": "Fast response, personal attention.",
-    "p2": "Strong defense, innovative strategies.",
-    "p3": "Effective procedures, protect your rights.",
-    "p4": "Precise consultations, latest laws."
-
-  },
-  "QUESTIONS": {
-    "1": {
-      "question": "What legal services does Shibla Legal offer?",
-      "answer": "We offer a diverse range of legal services including: legal consultations, litigation and defense before courts, contract drafting, company incorporation, judicial representation."
-    },
-    "2": {
-      "question": "How can I contact the Shibla Legal team?",
-      "answer": "You can contact the Shibla Legal team through several means, including: calling us at [Phone Number], sending an email to [Email Address], or visiting our office at [Address]."
-    },
-    "3": {
-      "question": "How can I book a legal consultation?",
-      "answer": "You can book a legal consultation by calling or emailing us to arrange a suitable time. You can also fill out a consultation request form on our website, and we will contact you as soon as possible."
-    },
-    "4": {
-      "question": "Do you only provide legal services to companies or also to individuals?",
-      "answer": "We provide comprehensive legal services to both companies and individuals alike. We have a specialized team to handle various legal issues facing both sectors."
-    },
-    "5": {
-      "question": "What are your working hours?",
-      "answer": "Our working hours are from [Start Time] to [End Time], from [Day] to [Day] in [Time Zone] time."
-    },
-    "6": {
-      "question": "What is the cost of the initial legal consultation?",
-      "answer": "The cost of the initial legal consultation varies depending on the nature and complexity of the case. Please contact us with the details of your case, and we will provide a cost estimate."
-    },
-    "7": {
-      "question": "What areas do you cover with your legal services?",
-      "answer": "We provide our legal services in [List of Areas or Cities]."
-    }
+    "servicesCollection": "A wide range of legal services"
   },
   "WHY_US": {
-    "heading": "Why Us",
-    "subheading": "Because we excel in experience, credibility, and a full commitment to serving our clients. With us, you'll get the legal solutions you deserve with unmatched expertise and professionalism.",
-    "team": "Accredited Lawyers Team",
-    "experience": "Years of Experience",
-    "customers": "Satisfied Valued Clients",
-    "success": "Recognized Legal Successes",
     "button": "Book Your Consultation"
   },
   "termsAndConditions": "Terms and Conditions",
   "privacyPolicy": "Privacy Policy",
   "TEXT": {},
-
   "LABELS": {
     "contactUs": "Contact Us",
     "location": "Location",
@@ -181,7 +78,6 @@
     "save": "Save",
     "confirm": "Confirm"
   },
-
   "ERRORS": {
     "shortPassword": "Password is short",
     "phoneLength": "Phone number must be {value} numbers",
@@ -191,27 +87,7 @@
     "isRequired": "{name} is required",
     "validEmailAddress": "Email address should be valid email"
   },
-
-  "FOOTER": {
-    "rights": "Najid AL-Qimam All Rights Reserved"
-  },
-  "TITLES": {
-    "letsTalkTech": " Let’s Talk Tech",
-    "letsTalkTechDesc": "Got a question about IT solutions, custom software, or digital transformation? Our experts are ready to provide the support and answers you need.",
-    "yourPartnerInDigitalSuccess": "Your Partner In Digital Success",
-    "creativeServices": "Creative Services",
-    "aboutUs": "About Us",
-    "ourTechnologies": "Our Advanced Technologies",
-    "ourTechnologiesDesc": "We utilize the latest technologies and innovative solutions to ensure the highest levels of performance and efficiency.",
-    "descriptionServiceSection": "Turning your ideas into cutting-edge technologies. Turning your ideas into cutting-edge technologies",
-    "serviceSection": "Discover Our Services."
-  },
   "Back_to_home": "Back to home",
-  "Years experience in serving people and mankind": "Years experience in serving people and mankind",
-  "rehabilitation long-term care": "rehabilitation & long-term care",
-  "Release The": "Release The",
-  "Pain Be More": "Pain Be More",
-  "Alive": "Alive.",
   "Back to home": "Back to home",
   "pleaseKindlyTryAgain": "Please Kindly Try Again",
   "something went wrong": "something went wrong"

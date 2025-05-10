@@ -40,7 +40,7 @@ export default function Error({
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-red-500">
+    <div className="min-h-screen flex flex-col items-center justify-center text-red-500 py-[25vh]">
       <h1 className="text-4xl font-bold">Oops! Something Went Wrong</h1>
       <p className="mt-4 text-lg">{getErrorMessage(error)}</p>
       <button

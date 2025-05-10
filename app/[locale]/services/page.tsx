@@ -1,12 +1,27 @@
 import Header from "@/components/Header";
 import ServicesSection from "@/components/services/servicesSection";
-import SERVICES from "@/assets/images/header/services.png";
+import { getServices } from "@/services/ApiHandler";
 
-function ServicesPage() {
+
+
+
+export async function generateMetadata() {
+  const data = await getServices();
+  return {
+    title: data.banner.title,
+    description: data.banner.description,
+  }
+}
+
+
+async function ServicesPage() {
+
+  const data = await getServices();
+
   return (
     <>
-      <Header page="SERVICES" image={SERVICES} />
-      <ServicesSection isPage />
+      <Header title={data.banner.title} desc={data.banner.description} image={data.banner.image} />
+      <ServicesSection features={data.our_services} />
     </>
   );
 }

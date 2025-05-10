@@ -1,22 +1,18 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import ICON from "@/assets/icons/scaler.svg";
-import IMAGE from "@/assets/images/footer.png";
 
-async function ValuesSection() {
-  const T = await getTranslations("OUR_VALUES");
+async function ValuesSection({ title, description, image, icon }: Omit<Section,'id'| 'features'| 'type'>) {
   return (
     <section className="relative mx-auto my-12  w-[95%] rounded-3xl bg-[url('@/assets/images/about/Rectangle.svg')] bg-right-top bg-no-repeat py-6 [background-size:1200px_auto]">
 
       <Image
-        src={ICON}
-        alt={""}
+        src={icon!}
+        alt={"icon"}
         width={50}
         height={50}
         className="mx-auto hidden sm:block"
       />
       <Image
-        src={IMAGE}
+        src={image}
         alt={"backgroud"}
         width={152}
         height={48}
@@ -26,9 +22,9 @@ async function ValuesSection() {
         data-aos={'fade-down'}
         className={`title-wrapper sec-px mb-12 mt-10 !items-center !justify-start sm:mt-2`}
       >
-        <h3 className="title !text-black !text-xl md:!text-3xl">{T("heading")}</h3>
+        <h3 className="title !text-black !text-xl md:!text-3xl">{title}</h3>
         <p className="desc relative m-2 px-6 !text-text-dark">
-          {T("subheading")}
+          {description}
           <span className="absolute -start-1 top-0 opacity-50">
             <svg
               width="23"
@@ -67,7 +63,7 @@ async function ValuesSection() {
           </span>
         </p>
       </div>
-      <div className="absolute top-0 left-0 w-[50%] rounded-3xl h-full bg-[url('@/assets/images/about/Rectangle.svg')] bg-left-top bg-no-repeat py-6 z-[-1] "></div>
+      <div className="absolute top-0 left-0 w-[50%] rounded-3xl h-full bg-[url('@/assets/images/about/Rectangle.svg')] bg-left-top bg-no-repeat py-6 z-[-1] dark:bg-sec-dark"></div>
     </section>
   );
 }

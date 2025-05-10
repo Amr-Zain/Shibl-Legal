@@ -1,8 +1,5 @@
-
-
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
-//import { headers } from 'next/headers';
+import { getMessages } from "next-intl/server";
 
 import type { Metadata } from "next";
 
@@ -14,6 +11,8 @@ import "aos/dist/aos.css";
 import "../globals.scss";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { getPrivacy, getSocial } from "@/services/ApiHandler";
+import AppStateProvider from "@/utils/providers/AppStateProvider";
 
 export async function generateMetadata({
   params,
@@ -21,20 +20,19 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const { locale } = await params;
-  const T = await getTranslations();
   const isArabic = locale === "ar";
-  console.log(isArabic)
-  //const settings = await getSettingsData();
- 
+  console.log(isArabic);
+  const data = await getPrivacy();
+
   return {
-    title: T('title'),
-    description: "Desc",
+    title: data.title,
+    description: data.description,
     icons: {
       icon: "/logo.png",
     },
     openGraph: {
-      title: "title",
-      description: "Desc",
+      title: data.title,
+      description: data.description,
     },
   };
 }
@@ -48,18 +46,17 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
   const messages = await getMessages({ locale: locale });
-  //const headersList =await headers();
-  //const pathname = new URL(headersList.get('next-url')).pathname || '/';
-  //let page = ( pathname ==='/'|| pathname === '/ar') ? "home" : pathname.split('/').at(-1).split("-");
+  const data = await getSocial();
+ 
 
-  
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
         <link rel="icon" href="/logo.png" />
       </head>
-      <body className="overflow-x-hidden bg-backgroud">
+      <body className="overflow-x-hidden bg-backgroud dark:bg-secondary/100">
         <NextIntlClientProvider messages={messages}>
+          <AppStateProvider initialData={data} />
           <div className="flex min-h-[100vh] flex-col">
             <ToastProvider>
               <AosWrapper>

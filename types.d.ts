@@ -6,11 +6,7 @@ interface General {
     content: string;
     image: string;
 }
-interface Question{
-    id: string;
-    question: string;
-    answer: string;
-}
+
 
 
 interface Features {
@@ -33,7 +29,7 @@ interface Service {
     id: number
 }
 
-interface TopIntro extends Page { }
+//interface TopIntro extends Page { }
 interface MiddleIntro extends Page {
     button_name: string;
     video: string;
@@ -49,20 +45,7 @@ interface HomeType {
     visions: General[]
 }
 
-interface Section {
-    type: string
-    id: number;
-    title: string;
-    desc: string;
-    background: string;
-    image: string;
-    features: {
-        id: number;
-        title: string;
-        desc: string;
-        icon: string
-    }[];
-}
+
 
 interface ServiceType {
     title: string;
@@ -76,4 +59,66 @@ interface ServiceType {
     name: string;
     type: string;
     sections: Section[]
+}
+interface Question {
+    id: string;
+    question: string;
+    answer: string;
+}
+interface FAQData {
+    faq: Question[];
+    banner: Banner
+    footer_description: string;
+
+}
+
+interface OurServicesData {
+    banner: Banner
+    our_services: Feature[];
+    footer_description: string;
+}
+
+type BannerTypes = 'privacy_policy' | 'terms' | 'main_banner' | 'about' | 'why_us' | 'our_services'
+    | 'contact_info' | 'about_banner' | 'goals' | 'core_values' | 'our_vision' | 'qa_banner' |
+    'contact_banner' | 'terms_banner' | 'privacy_banner';
+
+
+
+
+interface Feature {
+    id: number;
+    key: string | null;
+    value: string;
+    icon: string;
+    is_active: boolean;
+    title?: string;
+    description?: string
+}
+
+interface Section {
+    id: number;
+    type: BannerTypes;
+    title: string;
+    description: string;
+    image: string;
+    icon?: string;
+    features: Feature[];
+}
+
+interface Banner {
+    id: number;
+    type: BannerTypes;
+    title: string;
+    description: string;
+    image: string;
+    icon: string;
+    is_active: boolean;
+    features: Feature[]; 
+}
+
+interface OverVeiw {
+    faq: Question[];
+    sections: { [key in BannerTypes]?: Section };
+    banner: Banner;
+    footer_description: string;
 }

@@ -27,7 +27,7 @@ function AccordionSection({
             className={`flex w-full items-center justify-between py-4 transition-colors duration-200 ${!isPage && i !== questions.length - 1 ? "border-b border-secondary/80" : ""}`}
           >
             <div
-              className={`flex items-start justify-start text-[0.75rem] sm:text-sm font-medium md:text-lg  ${isPage ? "text-list-color" : "text-text"}`}
+              className={`flex items-start justify-start text-[0.75rem] sm:text-sm font-medium md:text-lg  dark:text-white ${isPage ? "text-list-color" : "text-text"}`}
             >
               <span className="mx-2">{i + 1}.</span>
               <h3 className="">{question.question}</h3>

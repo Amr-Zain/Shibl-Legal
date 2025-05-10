@@ -1,9 +1,14 @@
 import { create } from 'zustand'
 
 
-export type SocialKey = "linkedin" | "facebook" | "instagram" | "youtube" | "x"| "whatsapp";
 
-export type SettingsType = {
+export type SocialItem = {
+    key: SocialKey,
+    value: string,
+    id: number
+}
+export type SocialKey = "linkedin" | "facebook" | "instagram" | "youtube" | "x"| "whatsapp"|'phone'  | 'address' | 'email' | 'appoitnments' | 'desc';
+/* export type SettingsType = {
     email?: string
     facebook?: string
     footer_desc_ar?: string
@@ -25,7 +30,11 @@ export type SettingsType = {
     whatsapp?: string
     x?: string
     youtube?: string
-}
+    desc?: string
+} */
+export type SettingsType = {
+    [key in SocialKey]?: string; 
+  }
 interface AppStore {
     settings: SettingsType;
     setSettings: (settings: SettingsType) => void;
@@ -53,6 +62,7 @@ const inititals = {
         whatsapp: '',
         x: '',
         youtube: '',
+        desc:''
     }
 }
 

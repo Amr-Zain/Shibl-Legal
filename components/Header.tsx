@@ -1,15 +1,15 @@
 import Title from "@/components/general/Title";
-import { getTranslations } from "next-intl/server";
 import Image, { StaticImageData } from "next/image";
 
 export default async function Header({
-  page,
   image,
+  title,
+  desc
 }: {
-  page: string;
-  image: StaticImageData;
+  desc: string;
+  title: string;
+  image: string |StaticImageData;
 }) {
-  const T = await getTranslations(`${page.toUpperCase()}_HEADER`);
   return (
       <div className={`relative px-2 pb-[4rem] pt-[10rem] sm:px-6 lg:px-8`}>
         <span className={`overlay`}></span>
@@ -21,7 +21,7 @@ export default async function Header({
           className={"z-[2]"}
         />
         <div data-aos="fade-down" className="relative z-20">
-          <Title title={T("heading")} desc={T("subheading")} />
+          <Title title={title} desc={desc} />
         </div>
       </div>
   );

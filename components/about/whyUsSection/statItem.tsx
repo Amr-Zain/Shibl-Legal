@@ -1,5 +1,4 @@
-import { useTranslations } from "next-intl";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 const StatItem = ({
   number,
@@ -7,29 +6,28 @@ const StatItem = ({
   text,
 }: {
   number: string;
-  icon: StaticImageData;
+  icon: string;
   text: string;
 }) => {
-  const T = useTranslations("WHY_US");
 
   return (
     <div className="mx-auto w-fit">
-      <div dir="rtl" className="text-center text-[3rem] md:text-[4rem] font-bold text-primary">
+      <div dir="rtl" className="text-center text-5xl md:text-6xl font-bold text-primary">
         <span className="relative">
           +
-          <span className="absolute -right-7 bottom-[-0.45rem] size-14">
+          <span className="absolute right-[-1.5rem] bottom-[-.35rem] md:right-[-1.6rem] md:bottom-[-0.25rem] size-9 md:size-10  p-2 bg-icon-dark rounded-full flex justify-center items-center">
             <Image
               src={icon}
-              alt=""
-              width={56}
-              height={56}
-              className="w-full"
+              alt="icon"
+              width={25}
+              height={25}
+              className="max-h-full"
             />
           </span>
         </span>
         {number}
       </div>
-      <p className="text-sub">{T(text)}</p>
+      <p className="text-sub mt-6">{text}</p>
     </div>
   );
 };
