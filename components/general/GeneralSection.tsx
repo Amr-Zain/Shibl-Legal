@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 type Props = {
   item: {
@@ -18,9 +19,7 @@ const GeneralSection = ({ ...props }: Props) => {
     <div className="bg-right-bottom bg-no-repeat">
       <div className="bg-[left_3rem_top] bg-no-repeat">
         <div className="container grid grid-cols-1 items-center gap-5 bg-left-top bg-no-repeat md:grid-cols-2">
-          
           <div className="max-w-[600px] space-y-5 bg-right-bottom bg-no-repeat">
-            
             <h3
               className="animated wow fadeInRight text-4xl font-extrabold dark:text-white"
               data-wow-duration="1.3s"
@@ -29,15 +28,17 @@ const GeneralSection = ({ ...props }: Props) => {
                 __html: props.item.title || props.item.heading,
               }}
             ></h3>
-            <div
+            {/*   <div
               className="animated wow fadeInRight font-thin text-third"
               data-wow-duration="1.3s"
               data-wow-delay="0s"
               dangerouslySetInnerHTML={{
                 __html: props.item.desc || props.item.desc,
               }}
-            ></div>
-           
+            ></div> */}
+            <div className="animated wow fadeInRight font-thin text-third">
+              <ReactMarkdown>{props.item.desc}</ReactMarkdown>
+            </div>
           </div>
           <div className="h-full w-full">
             <Image
