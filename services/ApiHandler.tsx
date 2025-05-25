@@ -12,7 +12,8 @@ export const getOverVeiw = async (banner: BannerTypes): Promise<OverVeiw> => {
             const { type } = item;
             acc[type] = item;
             return acc;
-          },{}
+          },
+          {},
         );
       const result = {
         ...res.data.data,
@@ -43,15 +44,14 @@ export const getWhyUs = async (): Promise<Section> => {
 export const getSocial = async () => {
   return await axiosInstance
     .get("client/preview/social")
-    .then((res) =>{
-      console.log(res.data.data)
-      const social: { [key in SocialKey ]?: string } =
-      res.data.data.reduce(
+    .then((res) => {
+      const social: { [key in SocialKey]?: string } = res.data.data.reduce(
         (acc: { [key in SocialKey]: string }, item: SocialItem) => {
           const { key } = item;
           acc[key] = item.value;
           return acc;
-        },{}
+        },
+        {},
       );
       return social;
     })
@@ -81,14 +81,19 @@ export const getServices = async (): Promise<OurServicesData> => {
     .get("/client/preview/our-services")
     .then((res) => res.data.data)
     .catch((error) => {
-      if (error instanceof Error) {
-        throw new AppError(error.message, 500);
-      } else {
-        throw new AppError("Field to fetch home", 500);
-      }
+      console.error(error);
     });
-  };
-  export const getPrivacy = async ():Promise<Section>=>{
+};
+
+export const getTerms = async (): Promise<{banner: Banner, terms: Section}> => {
+  return await axiosInstance
+    .get("/client/preview/terms")
+    .then((res) => res.data.data)
+    .catch((error) => {
+      console.error(error);
+    });
+};
+export const getPrivacy = async (): Promise<{banner: Banner, privacy: Section}> => {
   return await axiosInstance
     .get("/client/preview/privacy")
     .then((res) => res.data.data)
@@ -99,31 +104,4 @@ export const getServices = async (): Promise<OurServicesData> => {
         throw new AppError("Field to fetch home", 500);
       }
     });
-
-}
-
-// export const getCategoriesData = async () => {
-//   try {
-//     const { data } = await axiosInstance.get("/categories");
-//     return data?.data || [];
-//   } catch {
-//     throw new CustomError("Failed to fetch Categories data", 500, "APIError");
-
-//   }
-// };
-
-// export const getShareData = async () => {
-//   return await axiosInstance.get("/relations");
-// };
-
-// export const getSettingsData = async () => {
-//   return await axiosInstance.get("/settings");
-// };
-
-// export const getTermsData = async () => {
-//   return await axiosInstance.get(`/term`);
-// };
-
-// export const getPrivacyData = async () => {
-//   return await axiosInstance.get(`/policy`);
-// };
+};

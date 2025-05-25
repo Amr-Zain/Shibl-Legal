@@ -14,9 +14,9 @@ export default async function HomePage() {
     <>
       <Header
         title={data.banner?.title}
-        desc={data.banner.description}
-        image={data.banner.image}
-        features={data.banner.features}
+        desc={data.banner?.description}
+        image={data.banner?.image}
+        features={data.banner?.features}
       />
 
       <div className="mt-16 space-y-12">
@@ -28,14 +28,14 @@ export default async function HomePage() {
 
         <HomeQuestions
           questions={data.faq}
-          title={data.sections["qa_banner"]!.title}
-          image={data.sections["qa_banner"]!.image}
+          title={data.sections["qa_banner"]?.title}
+          image={data.sections["qa_banner"]?.image}
         />
 
         <ContactSection
           title={data.sections["contact_info"]?.title}
           description={data.sections["contact_info"]?.description}
-          image={data.sections["contact_info"]!.image}
+          image={data.sections["contact_info"]?.image}
         />
       </div>
     </>

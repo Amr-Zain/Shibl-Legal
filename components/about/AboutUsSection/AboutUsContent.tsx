@@ -24,7 +24,7 @@ const AboutUsContent = async ({ title, desc, features }: ContentSectionProps) =>
       />}
       <div className="relative space-y-5">
         <div className="mb-12 grid grid-cols-1 items-start md:gap-x-8 lg:grid-cols-2">
-          {features.map(({id, value, icon}) => (
+          {features?.map(({id, value, icon}) => (
             <FeatureListItem key={id} text={value} icon={icon} />
           ))}
         </div>

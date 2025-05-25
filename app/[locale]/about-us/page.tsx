@@ -9,9 +9,11 @@ import AboutSection from "@/components/about/AboutUsSection";
 
 export async function generateMetadata() {
   const data = await getOverVeiw("about_banner");
+  if(!data) return;
+
   return {
-    title: data.banner.title,
-    description: data.banner.description,
+    title: data?.banner?.title,
+    description: data?.banner?.description,
   }
 }
 export default async function AboutPage() {
@@ -19,15 +21,15 @@ export default async function AboutPage() {
 
   return (
     <>
-      <Header
+      {data?.banner&&<Header
         title={data.banner.title}
         desc={data.banner.description}
         image={data.banner.image}
-      />
+      />}
       <AboutSection
-        description={data.sections["about"]!.description}
-        features={data.sections["about"]!.features}
-        image={data.sections["about"]!.image}
+        description={data.sections["about"]?.description as string}
+        features={data.sections["about"]?.features as Feature[]}
+        image={data.sections["about"]?.image as string}
       />
       <OurGoalsSection {...data.sections["goals"]!} />
       <WhyUsSection />

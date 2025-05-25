@@ -8,6 +8,7 @@ async function WhyUsSection() {
   const T = await getTranslations();
 
   const data = await getWhyUs();
+  if(!data) return;
   return (
     <>
       <div className={`sec-px relative mx-auto my-14 w-[95%] py-10`}>

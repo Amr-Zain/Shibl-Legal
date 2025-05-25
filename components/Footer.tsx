@@ -12,13 +12,12 @@ import { appStore } from "@/stores/app";
   const T =  useTranslations();
   const description = appStore(state=>state.settings.desc)
   return (
-    <footer className={`relative`}>
+    <footer className={`relative bottom-0`}>
       <div className={`overlay`}></div>
       <Image
         src={FOOTER}
         alt={"footer image"}
         fill={true}
-        objectFit="cover"
         className={"z-[2]"}
       />
       <div data-aos="fade-down" className="relative z-20">
@@ -36,8 +35,8 @@ import { appStore } from "@/stores/app";
           </div>
           <div className="flex flex-col items-center gap-4 py-4 sm:flex-row sm:justify-between">
             <div className="flex gap-4 text-sm text-text">
-              <span>{T("termsAndConditions")}</span>
-              <span>{T("privacyPolicy")}</span>
+              <Link href={'/terms'}>{T("termsAndConditions")}</Link>
+              <Link href={'/privacy'}>{T("privacyPolicy")}</Link>
             </div>
             <SocialLinks />
           </div>

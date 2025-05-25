@@ -7,6 +7,7 @@ async function AboutSection({
   image,
   features,
 }: Pick<Section, 'description'| 'image'| 'features'>&{title?: string}) {
+  if(!image || !features?.length) return;
   return (
     <section
       data-aos="fade-down"

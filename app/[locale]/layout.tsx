@@ -11,28 +11,20 @@ import "aos/dist/aos.css";
 import "../globals.scss";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { getPrivacy, getSocial } from "@/services/ApiHandler";
+import { getSocial } from "@/services/ApiHandler";
 import AppStateProvider from "@/utils/providers/AppStateProvider";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const isArabic = locale === "ar";
-  console.log(isArabic);
-  const data = await getPrivacy();
-
+export async function generateMetadata(): Promise<Metadata> {
+  //const data = await getPrivacy();
   return {
-    title: data.title,
-    description: data.description,
+    title:  "Shibl Legal",
+    description: "Shibl Legal",
     icons: {
       icon: "/logo.png",
     },
     openGraph: {
-      title: data.title,
-      description: data.description,
+      title:"Shibl Legal",
+      description:"Shibl Legal",
     },
   };
 }
@@ -57,10 +49,10 @@ export default async function RootLayout({
       <body className="overflow-x-hidden bg-backgroud dark:bg-secondary/100">
         <NextIntlClientProvider messages={messages}>
           <AppStateProvider initialData={data} />
-          <div className="flex min-h-[100vh] flex-col">
+          <div className="flex min-h-[100vh] flex-col justify-between">
             <ToastProvider>
               <AosWrapper>
-                <div className="app_wrapper" id="app_wrapper">
+                <div className="app_wrapper flex min-h-[100vh] flex-col justify-between" id="app_wrapper">
                   <NavBar />
                   {children}
                   <Footer />

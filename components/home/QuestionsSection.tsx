@@ -11,9 +11,10 @@ const HomeQuestions = async ({
 }: {
   questions: Question[];
   title?: string;
-  image:string
+  image?:string
 }) => {
   const T = await getTranslations();
+  if(! image || questions) return
   return (
     <div className={`relative mx-auto my-14 w-[95%] py-10`}>
       <div className={`overlay rounded-[30px]`}></div>

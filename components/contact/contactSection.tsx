@@ -11,9 +11,10 @@ async function ContactSection({
 }: {
   title?: string;
   description?: string;
-  image: string;
+  image?: string;
 }) {
   const T = await getTranslations();
+  if(!image || !description) return
   return (
     <section className={`sec-px ${!title ? "mt-12" : ""}`}>
       {!!title && <SectionHeader heading={title} description={description} />}
@@ -42,7 +43,7 @@ async function ContactSection({
         </div>
         <div className="bg-[url('@/assets/images/statue-bg.svg')] bg-contain bg-no-repeat">
           <Image
-            src={image}
+            src={image!}
             alt="statue"
             height={450}
             width={500}

@@ -56,7 +56,7 @@ export default async function HomeHeader({
           <p className="text-sub">{T("HOME_HEADER.advicePrompt")}</p>
         </div>
       </div>
-      <HeaderBar features={features} />
+      {features.length&&<HeaderBar features={features} />}
     </div>
   );
 }

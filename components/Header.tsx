@@ -21,7 +21,7 @@ export default async function Header({
           className={"z-[2]"}
         />
         <div data-aos="fade-down" className="relative z-20">
-          <Title title={title} desc={desc} />
+         {title&& <Title title={title} desc={desc} />}
         </div>
       </div>
   );

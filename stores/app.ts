@@ -68,6 +68,6 @@ const inititals = {
 
 export const appStore = create<AppStore>((set) => ({
     ...inititals,
-    setSettings: (settings) => set(() => ({ settings })),
+    setSettings: (settings ={}) => set(() => ({ settings })),
 }));
 

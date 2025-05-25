@@ -4,7 +4,7 @@ import SectionHeader from "../SectionHeader";
 
 
 async function ServicesSection({ features, title, description }:  {features: Feature[]; title?:string; description?: string}) {
-  
+  if(!features) return;
   return (
     <section className="px-4 py-10 md:px-8 lg:px-14">
       {title && (

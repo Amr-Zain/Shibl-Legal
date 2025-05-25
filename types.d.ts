@@ -103,6 +103,7 @@ interface Section {
     image: string;
     icon?: string;
     features: Feature[];
+    is_active?: boolean;
 }
 
 interface Banner {
