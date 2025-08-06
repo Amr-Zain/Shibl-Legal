@@ -23,7 +23,7 @@ async function OurGoalsSection({
           className="relative z-[1] h-full w-full max-w-[100%]"
         />
       </div>
-      <div className="rounded-3xl bg-backgroud-sec bg-[url('@/assets/images/goals_bg.svg')] bg-cover bg-no-repeat p-8 dark:bg-sec-dark">
+      <div className="rounded-3xl bg-backgroud-sec bg-[url('../assets/images/goals_bg.svg')] bg-cover bg-no-repeat p-8 dark:bg-sec-dark">
         <Image src={icon!} alt="icon" width={55} height={55} />
         <SectionHeader heading={title} description={description} />
         {features && (

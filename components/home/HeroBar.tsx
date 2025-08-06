@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-const HeaderBar = async ({ features }: { features: Feature[] }) => {
+const HeroBar = async ({ features }: { features: Feature[] }) => {
   return (
-    <div className="scrollbar-hide gird dark:bg-sec-dark absolute -bottom-12 z-20 mx-auto flex max-h-24 w-[95%] overflow-x-auto rounded-3xl bg-white px-4 py-4 shadow-lg">
-      <div className="mx-[4rem] flex w-fit items-center justify-center gap-4">
+    <div className="scrollbar-hide gird dark:bg-sec-dark absolute -bottom-12 z-20 mx-auto flex max-h-24 w-[95%] overflow-x-auto rounded-3xl bg-white p-4 shadow-lg">
+      <div className="mx-auto flex w-fit items-center justify-center gap-4">
         {features.map(({ icon, id, value }, index) => (
           <div
             key={id}
@@ -20,7 +20,7 @@ const HeaderBar = async ({ features }: { features: Feature[] }) => {
                 className="h-full w-full object-contain"
               />
             </div>
-            <p className="h-fit w-fit whitespace-nowrap text-base font-medium text-text-dark md:whitespace-break-spaces md:text-lg lg:w-[12rem] lg:pb-2 xl:w-fit xl:pb-0 dark:text-white">
+            <p className="h-fit w-fit whitespace-nowrap text-base font-medium text-text-dark dark:text-white">
               {value}
             </p>
           </div>
@@ -30,4 +30,4 @@ const HeaderBar = async ({ features }: { features: Feature[] }) => {
   );
 };
 
-export default HeaderBar;
+export default HeroBar;

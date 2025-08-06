@@ -2,27 +2,27 @@ import Image from "next/image";
 
 async function ValuesSection({ title, description, image, icon }: Omit<Section,'id'| 'features'| 'type'>) {
   return (
-    <section className="relative mx-auto my-12  w-[95%] rounded-3xl bg-[url('@/assets/images/about/Rectangle.svg')] bg-right-top bg-no-repeat py-6 [background-size:1200px_auto]">
+    <section className="relative mx-auto my-12  w-[95%] rounded-3xl bg-backgroud-sec dark:bg-sec-dark">
 
       <Image
         src={icon!}
         alt={"icon"}
         width={50}
         height={50}
-        className="mx-auto hidden sm:block"
+        className="mx-auto hidden sm:block mt-4"
       />
       <Image
         src={image}
         alt={"backgroud"}
         width={152}
         height={48}
-        className="absolute right-0 top-0 max-h-[3rem] max-w-[9.5rem] rounded-full bg-cover bg-no-repeat"
+        className="absolute object-cover right-0 top-0 max-h-[3rem] max-w-[9.5rem] rounded-full bg-cover bg-no-repeat"
       />
       <div
         data-aos={'fade-down'}
         className={`title-wrapper sec-px mb-12 mt-10 !items-center !justify-start sm:mt-2`}
       >
-        <h3 className="title !text-black !text-xl md:!text-3xl">{title}</h3>
+        <h3 className="title !text-xl md:!text-3xl">{title}</h3>
         <p className="desc relative m-2 px-6 !text-text-dark">
           {description}
           <span className="absolute -start-1 top-0 opacity-50">
@@ -63,7 +63,6 @@ async function ValuesSection({ title, description, image, icon }: Omit<Section,'
           </span>
         </p>
       </div>
-      <div className="absolute top-0 left-0 w-[50%] rounded-3xl h-full bg-[url('@/assets/images/about/Rectangle.svg')] bg-left-top bg-no-repeat py-6 z-[-1] dark:bg-sec-dark"></div>
     </section>
   );
 }

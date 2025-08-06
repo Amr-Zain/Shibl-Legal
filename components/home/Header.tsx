@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import Title from "@/components/general/Title";
 import { ArrowLeft, Aword } from "@/components/Icons";
-import HeaderBar from "./HeaderBar";
+import HeroBar from "./HeroBar";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 
@@ -56,7 +56,7 @@ export default async function HomeHeader({
           <p className="text-sub">{T("HOME_HEADER.advicePrompt")}</p>
         </div>
       </div>
-      {features.length&&<HeaderBar features={features} />}
+      {features.length&&<HeroBar features={features} />}
     </div>
   );
 }

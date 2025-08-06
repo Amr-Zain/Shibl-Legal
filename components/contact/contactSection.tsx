@@ -41,7 +41,7 @@ async function ContactSection({
             <StarIcon />
           </span>
         </div>
-        <div className="bg-[url('@/assets/images/statue-bg.svg')] bg-contain bg-no-repeat">
+        <div className="bg-[url('../assets/images/statue-bg.svg')] bg-contain bg-no-repeat">
           <Image
             src={image!}
             alt="statue"
