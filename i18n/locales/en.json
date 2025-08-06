@@ -76,7 +76,8 @@
     "yesLogout": "Yes, Logout",
     "yesDelete": "Yes, delete",
     "save": "Save",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "loading":"loading..."
   },
   "ERRORS": {
     "shortPassword": "Password is short",
